@@ -1,0 +1,96 @@
+启动Ubuntu-22.04实例
+ #wsl -d Ubuntu-22.04
+
+#容器停掉后要重新启动docker
+cd dify
+cd docker
+docker compose up -d
+
+#访问
+http://localhost/signin
+
+
+服务器搭推理模型
+qwen_qwq
+deepseek_r1_7B
+
+Agent 、Chatflow、工作流工作原理
+文件处理的原理
+
+
+清华源：pip install <package_name> -i https://pypi.tuna.tsinghua.edu.cn/simple
+阿里源：pip install <package_name> -i https://mirrors.aliyun.com/pypi/simple
+
+olmocr 0.1.71 requires transformers==4.46.2
+
+aigc-robot
+Name: sentence-transformers
+Version: 2.2.2
+
+#打开tensorboard（指定端口）
+ tensorboard --logdir=logs --port 6008
+
+
+
+#hf下载模型/数据集
+set HF_ENDPOINT=https://hf-mirror.com
+huggingface-cli download --resume-download nvidia/Llama-3.1-Nemotron-Nano-VL-8B-V1 --local-dir ./nvidia/Llama-3.1-Nemotron-Nano-VL-8B-V1 --repo-type model --resume-download
+
+#删除指定虚拟环境
+conda remove -n env_name --all
+
+
+/root/.paddlex/official_models/
+
+CUDA_VISIBLE_DEVICES=3 python test.py
+nvidia-smi
+
+export CUDA_VISIBLE_DEVICES=6
+
+
+
+modelscope download --model canopylabs/orpheus-3b-0.1-ft --local_dir ./canopylabs/orpheus-3b-0.1-ft
+
+modelscope download --dataset MTEB/imdb --local_dir ./imdb
+
+MediaCrawler
+# 从配置文件中读取关键词搜索相关的帖子并爬取帖子信息与评论
+python main.py --platform xhs --lt qrcode --type search
+
+# 从配置文件中读取指定的帖子ID列表获取指定帖子的信息与评论信息
+python main.py --platform xhs --lt qrcode --type detail
+
+python main.py --platform bili --lt qrcode --type detail
+
+python main.py --platform dy --lt qrcode --type detail
+
+#url格式化
+python url_processed.py xhs_url.txt xhs_url_1.txt
+
+
+
+1.智能问数项目，纠错算法模块，调研纠错算法包括MacBERT、PaddleNLP、大模型纠错，用开源数据验证对比三种方式的纠错准确率，最终选择macbert训练实现错别字纠错，用AC自动机算法实现实体抽取和实体映射，最后通过fastAPI封装成接口
+2.智能语音交互项目，负责语音识别ASR（FireRedASR、Whisper-Large)、文本转语音TTS（Orpheus-TTS）项目部署、验证及推理加速
+3.爬虫工具调研与实现，包括Automa、FireCrawl、MediaCrawler，用于小红书数据采集
+
+
+1. 智能问数项目 - 纠错算法模块开发​：实现方式是先用基础的错别字纠错模型进行错别字纠正，再将纠错后的结果通过AC自动机算法实现非标准实体转标准实体。调研对比MacBERT、PaddleNLP、大模型纠错算法，基于开源数据集验证纠错准确率，最终选定 MacBERT 实现错别字纠错模块开发​；设计并实现 AC 自动机算法驱动的实体抽取与映射功能；通过 FastAPI 完成模块接口封装，为后端系统提供纠错接口服务​。
+2. 智能语音交互项目 - 语音系统部署与推理优化​：负责语音识别ASR（FireRedASR、Whisper-Large)、文本转语音TTS（Orpheus-TTS）模型的部署与功能验证​，并针对模型推理性能进行优化。
+3. 小红书数据采集 - 爬虫工具开发​：调研 Automa、FireCrawl、MediaCrawler 等工具，设计并实现适配小红书平台的数据采集方案​，完成爬虫工具开发，为后续大模型训练提供多维度数据支持。
+
+#创建项目
+scrapy startproject project_name
+
+cd  project_name
+
+#创建spider程序
+scrapy genspider jingdong  jd.com(域名）
+
+
+看下什么项目要推到gitte上面
+
+
+1.完成suryaocr模型数据解析脚本编写
+2.整理图片表格解析模型调研报告
+
+
