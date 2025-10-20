@@ -1,3 +1,4 @@
+
 启动Ubuntu-22.04实例
  #wsl -d Ubuntu-22.04
 
@@ -23,7 +24,6 @@ Agent 、Chatflow、工作流工作原理
 
 olmocr 0.1.71 requires transformers==4.46.2
 
-aigc-robot
 Name: sentence-transformers
 Version: 2.2.2
 
@@ -68,29 +68,8 @@ python main.py --platform dy --lt qrcode --type detail
 python url_processed.py xhs_url.txt xhs_url_1.txt
 
 
-
-1.智能问数项目，纠错算法模块，调研纠错算法包括MacBERT、PaddleNLP、大模型纠错，用开源数据验证对比三种方式的纠错准确率，最终选择macbert训练实现错别字纠错，用AC自动机算法实现实体抽取和实体映射，最后通过fastAPI封装成接口
-2.智能语音交互项目，负责语音识别ASR（FireRedASR、Whisper-Large)、文本转语音TTS（Orpheus-TTS）项目部署、验证及推理加速
-3.爬虫工具调研与实现，包括Automa、FireCrawl、MediaCrawler，用于小红书数据采集
-
-
-1. 智能问数项目 - 纠错算法模块开发​：实现方式是先用基础的错别字纠错模型进行错别字纠正，再将纠错后的结果通过AC自动机算法实现非标准实体转标准实体。调研对比MacBERT、PaddleNLP、大模型纠错算法，基于开源数据集验证纠错准确率，最终选定 MacBERT 实现错别字纠错模块开发​；设计并实现 AC 自动机算法驱动的实体抽取与映射功能；通过 FastAPI 完成模块接口封装，为后端系统提供纠错接口服务​。
-2. 智能语音交互项目 - 语音系统部署与推理优化​：负责语音识别ASR（FireRedASR、Whisper-Large)、文本转语音TTS（Orpheus-TTS）模型的部署与功能验证​，并针对模型推理性能进行优化。
-3. 小红书数据采集 - 爬虫工具开发​：调研 Automa、FireCrawl、MediaCrawler 等工具，设计并实现适配小红书平台的数据采集方案​，完成爬虫工具开发，为后续大模型训练提供多维度数据支持。
-
 #创建项目
 scrapy startproject project_name
 
 cd  project_name
-
-#创建spider程序
-scrapy genspider jingdong  jd.com(域名）
-
-
-看下什么项目要推到gitte上面
-
-
-1.完成suryaocr模型数据解析脚本编写
-2.整理图片表格解析模型调研报告
-
 
